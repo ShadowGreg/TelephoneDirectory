@@ -2,13 +2,18 @@ import database
 import view
 import funcs
 
-def f():
-   flag = False 
-   while flag == True:
-        p = int(input("Что хотите сделать: \n1 - Создать новую телефонную книгу \n2 - Вывести телефонную книгу в терминал \n3 \
-        - Добавить данные в телефонную книгу \n4 - Поиск \n5 -Удаление данных \n6 - Выход "))
+
+def choose_an_action():
+    flag = True
+    while flag:
+        p = int(input("Выберите - что хотите сделать: "
+                      "\n1 - Поиск по телефону "                      
+                      "\n3 - Добавить запись в телефонную книгу "
+                      "\n4 - Поиск по телефону "
+                      "\n5 - Удаление запись из телефонной книги "
+                      "\n6 - Выход "))
         match p:
-            case 1: 
+            case 1:
                 pass
             case 2:
                 pass
@@ -19,5 +24,4 @@ def f():
             case 5:
                 pass
             case 6:
-                flag == True
-            
+                flag = False

@@ -1,16 +1,16 @@
-def InputData():
+def input_data():
     fio = input("Введите ФИО: ")
-    tel = input("Введите номер телефона: ")
-    com = input("Введите комментарий: ")
-    return [fio,tel,com]
+    telephone = input("Введите номер телефона: ")
+    comment = input("Введите комментарий: ")
+    return fio, telephone, comment
 
-def OutputData(st):
-    print(st)
 
-def ListToStr(st):
-    rez=''
-    for i in st:
-        rez+= i+';'
+def print_data(in_data: str):
+    print(in_data)
+
+
+def convert_list_to_str(input_array: list):
+    rez = ''
+    for i in input_array:
+        rez += i + ';'
     return rez
-
-

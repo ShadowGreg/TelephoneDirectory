@@ -1,4 +1,4 @@
 import controller
 
-controller.f()
+controller.choose_an_action()
 
