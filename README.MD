@@ -3,8 +3,11 @@
 Команда
 
 Григорий - https://github.com/ShadowGreg/TelephoneDirectory
-Татьяна -
+
+Татьяна - https://github.com/v0lucris/TelephoneDirectory
+
 Андрей -
+
 Алексей - https://github.com/ZaripovAlex/TelephoneDirectory
 
 Структура приложения (модули) :
