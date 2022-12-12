@@ -13,7 +13,11 @@
 Структура приложения (модули) :
 
 funcs.py        делает:
+
 database.py     делает:
+
 controller.py   делает:
+
 view.py         делает:
+
 main.py         делает:
