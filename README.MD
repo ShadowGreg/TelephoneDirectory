@@ -6,18 +6,18 @@
 
 Татьяна - https://github.com/v0lucris/TelephoneDirectory
 
-Андрей -
+Андрей - https://github.com/Andrew-krsk/TelephoneDirectory
 
 Алексей - https://github.com/ZaripovAlex/TelephoneDirectory
 
 Структура приложения (модули) :
 
-funcs.py        делает:
+funcs.py        делает: Андрей, Алексей
 
-database.py     делает:
+database.py     делает: Татьяна
 
-controller.py   делает:
+controller.py   делает: Григорий
 
-view.py         делает:
+view.py         делает: Алексей
 
-main.py         делает:
+main.py         делает: Алексей
