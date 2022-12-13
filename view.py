@@ -1,8 +1,7 @@
-def input_data():
-    fio = input("Введите ФИО: ")
+
+def Input_tel():
     telephone = input("Введите номер телефона: ")
-    comment = input("Введите комментарий: ")
-    return fio, telephone, comment
+    return telephone
 
 
 def print_data(in_data: str):
@@ -13,4 +12,6 @@ def convert_list_to_str(input_array: list):
     rez = ''
     for i in input_array:
         rez += i + ';'
+    rez=rez[:-1]
     return rez
+
