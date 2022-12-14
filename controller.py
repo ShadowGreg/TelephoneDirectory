@@ -1,31 +1,25 @@
-import database as db
-import view as v
+import database
+import view
 import funcs
 
 
-def choose_an_action():
-    flag = True
-    while flag:
-        p = int(input("Выберите - что хотите сделать: "
-                      "\n1 - Поиск по Фамилии или Имени "                      
-                      "\n3 - Добавить запись в телефонную книгу "
-                      "\n4 - Поиск по телефону "
-                      "\n5 - Удаление запись из телефонной книги "
-                      "\n6 - Выход\n "))
-        match p:
+def choose_an_action(case_flag=True):
+    view.print_choose_action_menu()
+    while case_flag:
+        choice = view.input_choose()
+        match choice:
             case 1:
                 pass
             case 2:
                 pass
             case 3:
-                db.write_to_txt(v.input_data())
-                break
+                pass
             case 4:
                 pass
             case 5:
                 pass
             case 6:
-                flag = False
-            
+                case_flag = False
+
 
 choose_an_action()
