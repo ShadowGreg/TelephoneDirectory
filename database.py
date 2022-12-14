@@ -1,10 +1,9 @@
-
 def write_to_csv(input_data: list, input_file_name: str = 'bp.csv'):
     with open(input_file_name, "a", encoding='utf-8') as data:
         data.write(f'{input_data[0]};{input_data[1]};{input_data[2]};{input_data[3]}\n')
 
 
-def write_to_txt(input_data: list [str], input_file_name: str = 'bp.txt'):
+def write_to_txt(input_data: list[str], input_file_name: str = 'bp.txt'):
     with open(input_file_name, "a", encoding='utf-8') as data:
         data.write(
             f'{input_data[0]}'
@@ -27,4 +26,11 @@ def read_from_file(input_file_name: str = 'bp.csv'):
     return file_data
 
 
-# TODO add delete
+# TODO функцию полной перезаписи базы
+
+def full_rewrite_csv(in_data: list[list]):
+    return 'ок'
+
+
+def full_rewrite_txt(in_data: list[list]):
+    return 'ок'

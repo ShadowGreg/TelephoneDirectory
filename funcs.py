@@ -4,7 +4,7 @@ import database
 # TOTO add next functions
 # search
 
-def search_phone(input_phone_number: str, input_array: list) -> list:
+def search_by_phone(input_phone_number: str, input_array: list) -> list:
     output_records = []
     for record_line in input_array:
         if input_phone_number in record_line[2]:
@@ -12,12 +12,8 @@ def search_phone(input_phone_number: str, input_array: list) -> list:
     return output_records
 
 
-def add_new_line_in_bd():
-    sn = input("Введите Фамилию: ")
-    fn = input("Введите Имя: ")
-    telephone = input("Введите номер телефона: ")
-    comment = input("Введите комментарий: ")
-    return fn, sn, telephone, comment
+def add_new_line_in_bd(input_method):
+    return input_method
 
 
 def Import_HTML(input_data: list):
@@ -34,13 +30,9 @@ def Import_HTML(input_data: list):
         page.write(html)
 
 
-def Convert_str_to_list(st: str):
-    print(st)
-    st = st.split("\n")
-    for i in range(len(st)):
-        st[i] = st[i].split(';')
-
-    return st
+def get_data_from_bd(data_name: str = 'bp.csv') -> list[list]:
+    # TODO
+    return data_name
 
 
 def delete_line_fom_bd(input_phone_number: str, input_array: list) -> list:
