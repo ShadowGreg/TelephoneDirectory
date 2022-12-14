@@ -11,7 +11,8 @@ def choose_an_action(case_flag=True):
             phone_data = funcs.search_by_phone(view.input_phone_number())
             view.print_data(phone_data)
         if choice == 2:
-            for item in funcs.get_data_from_bd():
+            data_base = funcs.get_data_from_bd(database.read_from_file())
+            for item in data_base:
                 view.print_data(item)
         if choice == 3:
             new_line_data = funcs.add_new_line_in_bd(view.input_data())
@@ -23,6 +24,3 @@ def choose_an_action(case_flag=True):
             database.full_rewrite_txt(full_data)
         if choice == 5:
             case_flag = False
-
-
-choose_an_action()

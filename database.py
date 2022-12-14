@@ -12,18 +12,15 @@ def write_to_txt(input_data: list[str], input_file_name: str = 'bp.txt'):
             f'\n{input_data[3]}\n\n\n')
 
 
-def read_from_file(input_file_name: str = 'bp.csv'):
-    with open(input_file_name, "r", encoding='utf-8') as data:
-        file_data = data.read()
-        file_data = file_data.replace('-', '')
-        file_data = file_data.replace('\n', ' ')
-        file_data = file_data.split('   ')
-        lst = []
-        for word in file_data:
-            s = word.split(' ')
-            lst.append(s)
-        print(lst)
-    return file_data
+def read_from_file(input_file_name: str= 'bp.csv') -> str:
+    if '.txt' in input_file_name:
+        with open(input_file_name, "r", encoding='utf-8') as data:
+            file_data = data.read()
+            return file_data
+    elif '.csv' in input_file_name:
+        with open(input_file_name, "r", encoding='utf-8') as data:
+            file_data = data.read()
+            return file_data
 
 
 # TODO функцию полной перезаписи базы
