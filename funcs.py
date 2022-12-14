@@ -1,8 +1,23 @@
-import database
+def get_data_from_bd(file_data: str) -> list[list[str]]:
+    file_data = file_data.replace('-', '')
+    file_data = file_data.replace(' ', '')
+    file_data = file_data.replace('\n', ' ')
+    lst = []
+    if '  ' in file_data:
+        file_data = file_data.split('  ')
+        for word in file_data:
+            if word != '':
+                s = word.split(' ')
+                lst.append(s)
+        return lst
+    elif ';' in file_data:
+        file_data = file_data.split('  ')
+        for word in file_data:
+            if word != '':
+                s = word.split(';')
+                lst.append(s)
+        return lst
 
-
-# TOTO add next functions
-# search
 
 def search_by_phone(input_phone_number: str, input_array: list) -> list:
     output_records = []
@@ -16,37 +31,8 @@ def add_new_line_in_bd(input_method):
     return input_method
 
 
-def Import_HTML(input_data: list):
-    html = '<!DOCTYPE HTML>'
-    html += '<html>\n  <head>\n'
-    # html += '<meta charset="utf-8">'
-    html += '<TITLE> Телефонная книга </TITLE>\n'
-    html += '</head>\n  <body>\n <table>\n'
-    html += '<tr><th> Фамилия </th><th> Имя </th><th> Телефон </th><th> Комментарий </th></tr> '
-    for i in range(len(input_data)):
-        html += f'<tr><th> {input_data[i][0]} </th><th> {input_data[i][1]} </th><th> {input_data[i][2]} </th><th> {input_data[i][3]} </th></tr> \n'
-    html += ' </table>\n </body>\n</html>'
-    with open('index.html', 'w') as page:
-        page.write(html)
-
-
-def get_data_from_bd(data_name: str = 'bp.csv') -> list[list]:
-    # TODO
-    return data_name
-
-
 def delete_line_fom_bd(input_phone_number: str, input_array: list) -> list:
     for i in range(len(input_array) + 1):
         if input_array[i][2] == input_phone_number:
             input_array.pop(i)
     return input_array
-
-# def find_name_from_number():
-
-#     find_num = v.input_number()
-#     data = db.read_from_file_txt()
-#     if find_num in data:
-#         print()
-
-
-# find_name_from_number()
