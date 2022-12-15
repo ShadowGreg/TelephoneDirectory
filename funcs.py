@@ -11,7 +11,7 @@ def get_data_from_bd(file_data: str) -> list[list[str]]:
                 lst.append(s)
         return lst
     elif ';' in file_data:
-        file_data = file_data.split('  ')
+        file_data = file_data.split(' ')
         for word in file_data:
             if word != '':
                 s = word.split(';')
