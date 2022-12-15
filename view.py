@@ -34,7 +34,7 @@ def input_number() -> str:
     return num
 
 
-def input_choose(message: str = 'Ваш выбор > ') -> str:
+def input_choose(message: str = 'Ваш выбор (повторить меню - 5) > ') -> str:
     return int(input(message))
 
 
@@ -44,7 +44,8 @@ def print_choose_action_menu():
           "\n2 - Распечатать телефонную книгу "
           "\n3 - Добавить запись в телефонную книгу "
           "\n4 - Удаление запись из телефонной книги "
-          "\n5 - Выход\n ")
+          "\n5 - Главное меню "
+          "\n6 - Выход\n ")
 
 
 def print_data(input_array: list):

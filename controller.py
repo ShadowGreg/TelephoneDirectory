@@ -23,4 +23,7 @@ def choose_an_action(case_flag=True):
             database.full_rewrite_csv(full_data)
             database.full_rewrite_txt(full_data)
         if choice == 5:
+            view.print_choose_action_menu()
+        if choice == 6:
             case_flag = False
+
