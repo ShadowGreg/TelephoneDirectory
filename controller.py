@@ -8,8 +8,12 @@ def choose_an_action(case_flag=True):
     while case_flag:
         choice = view.input_choose()
         if choice == 1:
-            phone_data = funcs.search_by_phone(view.input_phone_number())
-            view.print_data(phone_data)
+            phone_data = funcs.search_by_phone(
+                view.input_phone_number(),
+                funcs.get_data_from_bd(database.read_from_file())
+            )
+            for item in phone_data:
+                view.print_data(item)
         if choice == 2:
             data_base = funcs.get_data_from_bd(database.read_from_file())
             for item in data_base:
@@ -26,4 +30,3 @@ def choose_an_action(case_flag=True):
             view.print_choose_action_menu()
         if choice == 6:
             case_flag = False
-
