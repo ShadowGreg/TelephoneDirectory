@@ -25,7 +25,9 @@ def choose_an_action(exit_choice=False):
             database.write_to_csv(new_line_data)
             database.write_to_txt(new_line_data)
         if choice == CHOICE_DELETE_CONTACT:
-            full_data = funcs.delete_line_fom_bd(view.input_phone_number())
+            full_data = funcs.delete_line_fom_bd(
+                view.input_phone_number(),
+                funcs.get_data_from_bd(database.read_from_file()))
             database.full_rewrite_csv(full_data)
             database.full_rewrite_txt(full_data)
         if choice == CHOICE_MAIN_MENU:

@@ -23,7 +23,7 @@ def read_from_file(input_file_name: str = 'bp.csv') -> str:
             return file_data
 
 
-# TODO функцию полной перезаписи базы
+# TODO доработать на созвоне
 
 def full_rewrite_csv(input_data: list, input_file_name: str = 'bp.csv'):
     with open(input_file_name, "r", encoding='utf-8') as f:
