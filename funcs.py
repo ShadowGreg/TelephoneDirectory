@@ -25,13 +25,14 @@ def get_data_from_bd(file_data: str) -> list[list[str]]:
         logging.debug(e)
 
 
-def search_by_phone(input_phone_number: str, input_array: list[list[str]]) -> list[list[str]]:
+def search_by_input_info(input_info: str, input_array: list[list[str]]) -> list[list[str]]:
     try:
-        output_records = []
-        for record_line in input_array:
-            if input_phone_number in record_line[2]:
-                output_records.append(record_line)
-        return output_records
+        output = []
+        for hi_level_item in input_array:
+            for low_level_item in hi_level_item:
+                if input_info in low_level_item:
+                     output.append(hi_level_item)
+        return output
     except Exception as e:
         logging.debug(e)
 
