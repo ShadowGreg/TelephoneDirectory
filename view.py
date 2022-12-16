@@ -34,7 +34,7 @@ def input_number() -> str:
     return num
 
 
-def input_choose(message: str = 'Ваш выбор (повторить меню - 5) > ') -> str:
+def input_choose(message: str = f'Ваш выбор (повторить меню - 5) > ') -> str:
     return int(input(message))
 
 
