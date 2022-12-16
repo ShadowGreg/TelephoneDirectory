@@ -31,7 +31,7 @@ def search_by_input_info(input_info: str, input_array: list[list[str]]) -> list[
         for hi_level_item in input_array:
             for low_level_item in hi_level_item:
                 if input_info in low_level_item:
-                     output.append(hi_level_item)
+                    output.append(hi_level_item)
         return output
     except Exception as e:
         logging.debug(e)
@@ -51,4 +51,3 @@ def delete_line_fom_bd(input_phone_number: str, input_array: list[list[str]]) ->
         return output_array
     except Exception as e:
         logging.debug(e)
-

@@ -4,6 +4,7 @@ import funcs
 import start_data
 import click
 from exception import logging
+from os import system, name
 
 CHOICE_SEARCH = 1
 CHOICE_PRINT_DIRECTORY = 2
@@ -103,4 +104,10 @@ def checking_existence_bd():
 
 
 def clear():
-    click.clear()
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
+
