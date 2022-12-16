@@ -4,6 +4,7 @@ def input_data() -> list[str]:
     lst[1] = input_name()
     lst[2] = input_phone_number()
     lst[3] = input_comment()
+    print_separator()
     return lst
 
 
@@ -34,7 +35,7 @@ def input_number() -> str:
     return num
 
 
-def input_choose(message: str = 'Ваш выбор (повторить меню - 5) > ') -> str:
+def input_choose(message: str = f'Ваш выбор (Что бы повторить меню - 5) > ') -> str:
     return int(input(message))
 
 
@@ -53,4 +54,14 @@ def print_data(input_array: list):
     print(f"Имя: {input_array[1]}")
     print(f"Номер телефона: {input_array[2]}")
     print(f"Комментарий: {input_array[3]}")
+    print_separator()
+
+
+def print_not_found():
+    print('Контакт не найден, попробуйте ещё раз')
+    print_separator()
+
+
+def print_separator():
     print('---------------------')
+
