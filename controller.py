@@ -4,6 +4,7 @@ import funcs
 import start_data
 import click
 from exception import logging
+from os import system, name
 
 CHOICE_SEARCH = 1
 CHOICE_PRINT_DIRECTORY = 2
@@ -85,7 +86,7 @@ def print_array_data_from(input_data: list[list[str]]):
 
 def search_by_input_data() -> list[list[str]]:
     try:
-        return funcs.search_by_phone(
+        return funcs.search_by_input_info(
             view.input_phone_number(),
             funcs.get_data_from_bd(database.read_from_file()))
     except Exception as e:
@@ -94,14 +95,19 @@ def search_by_input_data() -> list[list[str]]:
 
 def checking_existence_bd():
     try:
-        database.read_from_file()
+        if not database.read_from_file():
+            for item in start_data.start_data:
+                database.write_to_txt(item)
+                database.write_to_csv(item)
     except Exception as e:
         logging.debug(e)
-    finally:
-        for item in start_data.start_data:
-            database.write_to_txt(item)
-            database.write_to_csv(item)
 
 
 def clear():
-    click.clear()
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
+
+
+
