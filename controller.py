@@ -2,7 +2,6 @@ import database
 import view
 import funcs
 import start_data
-import click
 from exception import logging
 from os import system, name
 
