@@ -1,3 +1,11 @@
 comment:
-  - 'Key' : 'Description'
+  - 'choose_an_action' : 'Menu navigation'
+  - 'search' : 'Search'
+  - 'print_directory' : 'Print'
+  - 'add_contact' : 'Adding record'
+  - 'delete_contact' : 'Deleted a record'
+  - 'print_array_data_from' : 'Printing array data form'
+  - 'search_by_info' : 'search by info'
+  - 'checking_existence_bd' : 'check existance'
+  - 'clear' : 'clear screen'
 

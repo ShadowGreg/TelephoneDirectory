@@ -14,6 +14,6 @@ def log_info(st: str):
 
 with open('registr_info.yaml', 'r') as f:
     comment = yaml.safe_load(f)
-    print(comment)
+    print(comment['comment'][1])
 def registretion_info():
     pass
