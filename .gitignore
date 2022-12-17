@@ -1,0 +1,9 @@
+ __pycache__/controller.cpython-311.pyc
+ __pycache__/database.cpython-311.pyc
+ __pycache__/funcs.cpython-311.pyc
+ __pycache__/view.cpython-311.pyc
+ __pycache__/exception.cpython-311.pyc
+ __pycache__/start_data.cpython-311.pyc
+bp.txt
+bp.csv
+app.log
