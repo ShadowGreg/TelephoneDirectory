@@ -48,7 +48,7 @@ def choose_an_action(exit_choice=False):
 
 def search():
     try:
-        phone_data = search_by_input_data()
+        phone_data = search_by_info()
         print_array_data_from(phone_data)
     except Exception as e:
         logging.debug(e)
@@ -74,7 +74,7 @@ def add_contact():
 def delete_contact():
     try:
         full_data = funcs.delete_line_fom_bd(
-            view.input_phone_number(),
+            view.input_info(),
             funcs.get_data_from_bd(database.read_from_file()))
         database.delete_csv()
         database.delete_txt()
@@ -96,10 +96,10 @@ def print_array_data_from(input_data: list[list[str]]):
         logging.debug(e)
 
 
-def search_by_input_data() -> list[list[str]]:
+def search_by_info() -> list[list[str]]:
     try:
         return funcs.search_by_input_info(
-            view.input_phone_number(),
+            view.input_info(),
             funcs.get_data_from_bd(database.read_from_file()))
     except Exception as e:
         logging.debug(e)
