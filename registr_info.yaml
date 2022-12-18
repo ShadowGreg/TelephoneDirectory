@@ -1,3 +1,21 @@
-comment:
-  - 'Key' : 'Description'
+descr:
+  choose_an_action:
+    desciption: 'Menu Navigation'
+  search:
+    desciption: 'Search'
+  print_directory:
+    desciption: 'Print'
+  add_contact:
+    desciption: 'Adding record'
+  delete_contact:
+    desciption: 'Deleted a record'
+  print_array_data_from:
+    desciption: 'Printing array data form'
+  search_by_info:
+    desciption: 'search by info'
+  checking_existence_bd:
+    desciption: 'check existance'
+  clear:
+    desciption: 'clear screen'
+
 
