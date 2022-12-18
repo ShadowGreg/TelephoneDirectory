@@ -4,6 +4,7 @@ import funcs
 import start_data
 from exception import logging
 from os import system, name
+from logger_file import log_info
 
 CHOICE_SEARCH = 1
 CHOICE_PRINT_DIRECTORY = 2
@@ -50,6 +51,7 @@ def search():
     try:
         phone_data = search_by_info()
         print_array_data_from(phone_data)
+        log_info(f'Added Record: {phone_data}', 'search')
     except Exception as e:
         logging.debug(e)
 

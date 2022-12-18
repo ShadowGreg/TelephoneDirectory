@@ -20,4 +20,4 @@ def log_info(st: str, fname ):
         logging.debug(e)
  
     
-log_info('bla bla bla bla Test record in logging file',  comment['descr']['add_contact']['desciption'])
+#log_info('',  comment['descr']['add_contact']['desciption'])
