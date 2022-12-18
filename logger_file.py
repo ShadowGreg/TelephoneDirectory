@@ -1,9 +1,10 @@
 import datetime
-import time
-from exception import logging
 import yaml
+from exception import logging
 
 log_dir = './log_dir/'
+
+
 # with open('registr_info.yaml', 'r') as f:
 #     comment = yaml.safe_load(f)
 #     print(comment['descr']['search']['desciption'])

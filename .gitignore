@@ -9,3 +9,6 @@ bp.csv
 app.log
 /tepm.py
 .gitignore
+/venv/
+/log_dir/
+/tutorial-env/
