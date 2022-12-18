@@ -70,3 +70,6 @@
 09:49:46,320 root DEBUG 'int' object is not callable
 09:49:46,471 root DEBUG 'int' object is not callable
 09:51:11,428 root DEBUG 'int' object is not callable
+2022-12-18 08:56:56,861 root DEBUG invalid literal for int() with base 10: ' '
+2022-12-18 08:56:59,119 root DEBUG invalid literal for int() with base 10: ' '
+2022-12-18 09:17:44,359 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: ' '

@@ -7,3 +7,5 @@
 bp.txt
 bp.csv
 app.log
+/tepm.py
+.gitignore

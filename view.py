@@ -1,46 +1,76 @@
+from exception import logging
+
+
 def input_data() -> list[str]:
-    lst = ['' for i in range(4)]
-    lst[0] = input_surname()
-    lst[1] = input_name()
-    lst[2] = input_telephone()
-    lst[3] = input_comment()
-    print_separator()
-    return lst
+    try:
+        lst = ['' for i in range(4)]
+        lst[0] = input_surname()
+        lst[1] = input_name()
+        lst[2] = input_telephone()
+        lst[3] = input_comment()
+        print_separator()
+        return lst
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_surname():
-    return input("Введите Фамилию: ")
+    try:
+        return input("Введите Фамилию: ")
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_name():
-    return input("Введите Имя: ")
+    try:
+        return input("Введите Имя: ")
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_telephone():
-    return input("Введите телефон: ")
+    try:
+        return input("Введите телефон: ")
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_comment():
-    return input("Введите комментарий: ")
+    try:
+        return input("Введите комментарий: ")
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_info():
-    return input("Искать: ")
+    try:
+        return input("Искать: ")
+    except Exception as e:
+        logging.debug(e)
 
 
 def print_data(in_data: str):
-    print(in_data)
+    try:
+        print(in_data)
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_number() -> str:
-    num = input('Введите номер: ')
-    num = num.replace('-', '')
-    num = num.replace(' ', '')
-    return num
+    try:
+        num = input('Введите номер: ')
+        num = num.replace('-', '')
+        num = num.replace(' ', '')
+        return num
+    except Exception as e:
+        logging.debug(e)
 
 
 def input_choose(message: str = f'Ваш выбор (Что бы повторить меню - 5) > ') -> int:
-    return int(input(message))
+    try:
+        return int(input(message))
+    except Exception as e:
+        logging.debug(e)
 
 
 def print_choose_action_menu():

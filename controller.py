@@ -12,7 +12,7 @@ def choose_an_action(exit_choice=False):
         2: lambda: print_directory(),
         3: lambda: add_contact(),
         4: lambda: delete_contact(),
-        5: lambda: clear(),
+        5: lambda: print_main_menu(),
         6: lambda: checking_exit()
     }
     checking_existence_bd()
@@ -21,6 +21,11 @@ def choose_an_action(exit_choice=False):
         choice = view.input_choose()
         if func_dict.get(choice, None) is not None:
             func_dict[choice]()
+
+
+def print_main_menu():
+    clear()
+    view.print_choose_action_menu()
 
 
 def search():
