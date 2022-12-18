@@ -2,7 +2,7 @@ def input_data() -> list[str]:
     lst = ['' for i in range(4)]
     lst[0] = input_surname()
     lst[1] = input_name()
-    lst[2] = input_info()
+    lst[2] = input_telephone()
     lst[3] = input_comment()
     print_separator()
     return lst
@@ -16,12 +16,16 @@ def input_name():
     return input("Введите Имя: ")
 
 
-def input_info():
-    return input("Искать: ")
+def input_telephone():
+    return input("Введите телефон: ")
 
 
 def input_comment():
     return input("Введите комментарий: ")
+
+
+def input_info():
+    return input("Искать: ")
 
 
 def print_data(in_data: str):
@@ -64,4 +68,3 @@ def print_not_found():
 
 def print_separator():
     print('---------------------')
-

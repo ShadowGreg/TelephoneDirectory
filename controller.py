@@ -5,16 +5,6 @@ import start_data
 from exception import logging
 from os import system, name
 
-CHOICE_SEARCH = 1
-CHOICE_PRINT_DIRECTORY = 2
-CHOICE_ADD_CONTACT = 3
-CHOICE_DELETE_CONTACT = 4
-CHOICE_MAIN_MENU = 5
-CHOICE_EXIT = 6
-
-
-# словарь
-
 
 def choose_an_action(exit_choice=False):
     func_dict = {
@@ -23,7 +13,7 @@ def choose_an_action(exit_choice=False):
         3: lambda: add_contact(),
         4: lambda: delete_contact(),
         5: lambda: clear(),
-        6: lambda: print('hi')
+        6: lambda: checking_exit()
     }
     checking_existence_bd()
     view.print_choose_action_menu()
@@ -31,19 +21,6 @@ def choose_an_action(exit_choice=False):
         choice = view.input_choose()
         if func_dict.get(choice, None) is not None:
             func_dict[choice]()
-        # if choice == CHOICE_SEARCH:
-        #     search()
-        # if choice == CHOICE_PRINT_DIRECTORY:
-        #     print_directory()
-        # if choice == CHOICE_ADD_CONTACT:
-        #     add_contact()
-        # if choice == CHOICE_DELETE_CONTACT:
-        #     delete_contact()
-        # if choice == CHOICE_MAIN_MENU:
-        #     clear()
-        #     view.print_choose_action_menu()
-        # if choice == CHOICE_EXIT:
-        #     exit_choice = True
 
 
 def search():
@@ -120,3 +97,7 @@ def clear():
         _ = system('cls')
     else:
         _ = system('clear')
+
+
+def checking_exit():
+    raise SystemExit
