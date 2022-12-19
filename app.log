@@ -73,3 +73,4 @@
 2022-12-18 08:56:56,861 root DEBUG invalid literal for int() with base 10: ' '
 2022-12-18 08:56:59,119 root DEBUG invalid literal for int() with base 10: ' '
 2022-12-18 09:17:44,359 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: ' '
+2022-12-19 13:33:35,328 root DEBUG [funcs.py:114 -               delete() ] 'in <string>' requires string as left operand, not function
