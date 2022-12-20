@@ -76,3 +76,9 @@
 2022-12-18 09:48:32,118 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: 'енк'
 2022-12-18 09:48:34,92 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: 'ццу'
 2022-12-18 10:32:08,664 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: ' кецук'
+2022-12-20 09:52:02,284 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 09:52:39,759 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 09:52:49,608 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 09:52:50,947 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 09:53:03,971 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 09:54:19,948 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
