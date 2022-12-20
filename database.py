@@ -22,7 +22,7 @@ def write_to_txt(input_data: list[str], input_file_name: str = 'bp.txt'):
         logging.debug(e)
 
 
-def read_from_file(input_file_name: str = 'bp.csv') -> str:
+def read_from_file(input_file_name: str = 'bp.txt') -> str:
     try:
         if '.txt' in input_file_name:
             with open(input_file_name, "r", encoding='utf-8') as data:

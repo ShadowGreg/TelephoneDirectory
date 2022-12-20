@@ -49,13 +49,6 @@ def input_info():
         logging.debug(e)
 
 
-def print_data(in_data: str):
-    try:
-        print(in_data)
-    except Exception as e:
-        logging.debug(e)
-
-
 def input_number() -> str:
     try:
         num = input('Введите номер: ')
