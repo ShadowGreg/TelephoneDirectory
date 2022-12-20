@@ -13,8 +13,7 @@ except yaml.YAMLError as e:
     print('Error while opening YAML file' + str(e))
 
 
-    
-print(comment['descr']['search']['desciption'])
+#print(comment['descr']['search']['desciption'])
 def registretion_info():
     pass
 
@@ -22,10 +21,10 @@ def log_info(st: str, fname ):
     log_date = datetime.datetime.now().strftime("%Y-%m-%d")
     log_time = datetime.datetime.now().strftime("%H_%M")
     try:
-        with open(log_dir+'log_'+log_date+'.log', 'rw') as f:
+        with open('log_'+log_date+'.log', 'a+') as f:
              f.write(f'{log_date}:{log_time} :[{fname}] : {st}\n')
-    except Exception as e:
-        logging.debug(e)
+    except FileNotFoundError as e:
+        print(f'File Open Error! {e}')
  
     
-log_info('',  comment['descr']['add_contact']['desciption'])
+#log_info('',  comment['descr']['add_contact']['desciption'])

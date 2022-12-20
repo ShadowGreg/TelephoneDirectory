@@ -1,5 +1,5 @@
 from exception import logging
-
+import logger_file
 
 def get_data_from_bd(file_data: str) -> list[list[str]]:
     try:
@@ -21,6 +21,7 @@ def get_data_from_bd(file_data: str) -> list[list[str]]:
                     s = word.split(';')
                     lst.append(s)
             return lst
+            logger_file.log_info(f'Requested a record: {lst}', 'get_data_from_bd')
     except Exception as e:
         logging.debug(e)
 
@@ -33,12 +34,14 @@ def search_by_input_info(input_info: str, input_array: list[list[str]]) -> list[
                 if input_info in low_level_item:
                     output.append(hi_level_item)
         return output
+        logger_file.log_info(f'Searched a record: {output}', 'get_data_from_bd')
     except Exception as e:
         logging.debug(e)
 
 
 def add_new_line_in_bd(input_method):
     return input_method
+    
  
 
 def delete_line_fom_bd(input_phone_number: str, input_array: list[list[str]]) -> list[list[str]]:
