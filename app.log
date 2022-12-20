@@ -82,3 +82,33 @@
 2022-12-20 09:52:50,947 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
 2022-12-20 09:53:03,971 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
 2022-12-20 09:54:19,948 root DEBUG [controller.py:78 - print_array_data_from() ] list index out of range
+2022-12-20 21:06:07,468 root DEBUG [controller.py:88 - print_array_data_from() ] local variable 'item' referenced before assignment
+2022-12-20 21:26:06,808 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/logger_file.py'
+2022-12-20 21:26:31,382 root DEBUG [controller.py:88 - print_array_data_from() ] Invalid format string
+2022-12-20 21:26:31,383 root DEBUG [controller.py:44 -               search() ] Invalid format string
+2022-12-20 21:26:38,301 root DEBUG [controller.py:63 -          add_contact() ] Invalid format string
+2022-12-20 21:26:39,783 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '\\'
+2022-12-20 21:30:27,755 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/controller.py'
+2022-12-20 21:30:31,899 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:30:33,155 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:30:33,666 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:30:34,132 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:30:34,538 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:30:51,574 root DEBUG [controller.py:64 -          add_contact() ] Invalid format string
+2022-12-20 21:30:58,60 root DEBUG [controller.py:89 - print_array_data_from() ] Invalid format string
+2022-12-20 21:30:58,61 root DEBUG [controller.py:45 -               search() ] Invalid format string
+2022-12-20 21:31:08,628 root DEBUG [controller.py:77 -       delete_contact() ] Invalid format string
+2022-12-20 21:31:16,963 root DEBUG [controller.py:77 -       delete_contact() ] Invalid format string
+2022-12-20 21:31:17,728 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: ''
+2022-12-20 21:32:05,375 root DEBUG [controller.py:89 - print_array_data_from() ] Invalid format string
+2022-12-20 21:32:05,376 root DEBUG [controller.py:45 -               search() ] Invalid format string
+2022-12-20 21:32:14,428 root DEBUG [controller.py:64 -          add_contact() ] Invalid format string
+2022-12-20 21:32:17,344 root DEBUG [controller.py:89 - print_array_data_from() ] Invalid format string
+2022-12-20 21:32:17,344 root DEBUG [controller.py:54 -      print_directory() ] Invalid format string
+2022-12-20 21:33:23,629 root DEBUG [controller.py:89 - print_array_data_from() ] local variable 'item' referenced before assignment
+2022-12-20 21:33:23,629 root DEBUG [controller.py:45 -               search() ] Invalid format string
+2022-12-20 21:33:51,886 root DEBUG [controller.py:89 - print_array_data_from() ] Invalid format string
+2022-12-20 21:33:51,887 root DEBUG [controller.py:45 -               search() ] Invalid format string
+2022-12-20 21:33:56,797 root DEBUG [controller.py:64 -          add_contact() ] Invalid format string
+2022-12-20 21:37:32,409 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'
+2022-12-20 21:39:03,27 root DEBUG [view.py:66 -         input_choose() ] invalid literal for int() with base 10: '& "C:/Program Files/Python310/python.exe" c:/Users/me/PhonesDir/TelephoneDirectory/main.py'

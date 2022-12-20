@@ -5,6 +5,7 @@ import start_data
 from exception import logging
 from os import system, name
 from logger_file import log_info
+import inspect
 
 
 def choose_an_action(exit_choice=False):
@@ -39,7 +40,7 @@ def search():
     try:
         phone_data = search_by_info()
         print_array_data_from(phone_data)
-        log_info(f'Searched info: {phone_data}', 'search')
+        log_info(f'Searched info: {phone_data}', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
@@ -48,7 +49,7 @@ def print_directory():
     try:
         data_base = funcs.get_data_from_bd(database.read_from_file())
         print_array_data_from(data_base)
-        log_info(f'Printed database', 'print_directory')
+        log_info(f'Printed database', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
@@ -58,7 +59,7 @@ def add_contact():
         new_line_data = funcs.add_new_line_in_bd(view.input_data())
         database.write_to_csv(new_line_data)
         database.write_to_txt(new_line_data)
-        log_info(f'Added record: {new_line_data}', 'add_contact')
+        log_info(f'Added record: {new_line_data}', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
@@ -71,7 +72,7 @@ def delete_contact():
         for item in full_data:
             database.write_to_txt(item)
             database.write_to_csv(item)
-        log_info(f'Delete record: {item}', 'delete_contact')
+        log_info(f'Delete record: {item}', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
@@ -83,7 +84,7 @@ def print_array_data_from(input_data: list[list[str]]):
         else:
             for item in input_data:
                 view.print_data(item)
-        log_info(f'Print dataForm: {item}', 'print_array_data_form')
+        log_info(f'Print dataForm: {item}', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
@@ -93,7 +94,7 @@ def search_by_info() -> list[list[str]]:
         return funcs.search_by_input_info(
             view.input_info(),
             funcs.get_data_from_bd(database.read_from_file()))
-        log_info(f'Searched info:', 'search_by_info')
+        log_info(f'Searched info:', inspect.currentframe())
     except Exception as e:
         logging.debug(e)
 
