@@ -42,18 +42,6 @@ def add_new_line_in_bd(input_method):
     return input_method
 
 
-def delete_line_fom_bd(input_phone_number: str, input_array: list[list[str]]) -> list[list[str]]:
-    try:
-        output_array = []
-        PHONE_INDEX = 2
-        for item in input_array:
-            if item[PHONE_INDEX] != input_phone_number:
-                output_array.append(item)
-        return output_array
-    except Exception as e:
-        logging.debug(e)
-
-
 def delete_much_contact(input_matching_line: list, input_array: list[list[str]]) -> list[list[str]]:
     try:
         output_array = []
