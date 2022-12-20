@@ -2,11 +2,12 @@ import datetime
 import time
 from exception import logging
 import yaml
+import os
 
 log_dir = './log_dir/'
 with open('registr_info.yaml', 'r') as f:
     comment = yaml.safe_load(f)
-    print(comment['descr']['search']['desciption'])
+    #print(comment['descr']['search']['desciption'])
 def registretion_info():
     pass
 

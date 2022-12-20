@@ -39,7 +39,7 @@ def search_by_input_info(input_info: str, input_array: list[list[str]]) -> list[
 
 def add_new_line_in_bd(input_method):
     return input_method
-
+ 
 
 def delete_line_fom_bd(input_phone_number: str, input_array: list[list[str]]) -> list[list[str]]:
     try:
