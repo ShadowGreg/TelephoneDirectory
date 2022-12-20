@@ -73,3 +73,6 @@
 2022-12-18 08:56:56,861 root DEBUG invalid literal for int() with base 10: ' '
 2022-12-18 08:56:59,119 root DEBUG invalid literal for int() with base 10: ' '
 2022-12-18 09:17:44,359 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: ' '
+2022-12-18 09:48:32,118 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: 'енк'
+2022-12-18 09:48:34,92 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: 'ццу'
+2022-12-18 10:32:08,664 root DEBUG [view.py:73 -         input_choose() ] invalid literal for int() with base 10: ' кецук'
