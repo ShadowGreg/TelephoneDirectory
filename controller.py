@@ -8,25 +8,31 @@ from logger_file import log_info
 
 
 def choose_an_action(exit_choice=False):
-    func_dict = {
-        1: lambda: search(),
-        2: lambda: print_directory(),
-        3: lambda: add_contact(),
-        4: lambda: delete_contact(),
-        5: lambda: print_main_menu(),
-        6: lambda: checking_exit()
-    }
-    checking_existence_bd()
-    view.print_choose_action_menu()
-    while not exit_choice:
-        choice = view.input_choose()
-        if func_dict.get(choice, None) is not None:
-            func_dict[choice]()
+    try:
+        func_dict = {
+            1: lambda: search(),
+            2: lambda: print_directory(),
+            3: lambda: add_contact(),
+            4: lambda: delete_contact(),
+            5: lambda: print_main_menu(),
+            6: lambda: checking_exit()
+        }
+        checking_existence_bd()
+        view.print_choose_action_menu()
+        while not exit_choice:
+            choice = view.input_choose()
+            if func_dict.get(choice, None) is not None:
+                func_dict[choice]()
+    except Exception as e:
+        logging.debug(e)
 
 
 def print_main_menu():
-    clear()
-    view.print_choose_action_menu()
+    try:
+        clear()
+        view.print_choose_action_menu()
+    except Exception as e:
+        logging.debug(e)
 
 
 def search():
@@ -57,9 +63,7 @@ def add_contact():
 
 def delete_contact():
     try:
-        full_data = funcs.delete_line_fom_bd(
-            view.input_info(),
-            funcs.get_data_from_bd(database.read_from_file()))
+        full_data = funcs.delete_much_contact(view.input_data(), funcs.get_data_from_bd(database.read_from_file()))
         database.delete_csv()
         database.delete_txt()
         for item in full_data:
