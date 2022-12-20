@@ -10,6 +10,8 @@
 
 Алексей - https://github.com/ZaripovAlex/TelephoneDirectory
 
+Адрей Цой - https://github.com/smartsoltech/TelephoneDirectory
+
 Структура приложения (модули) :
 
 funcs.py        делает: Андрей, Алексей
@@ -21,3 +23,5 @@ controller.py   делает: Григорий
 view.py         делает: Алексей
 
 main.py         делает: Алексей
+
+logger_file.py  делает: Андрей Цой
