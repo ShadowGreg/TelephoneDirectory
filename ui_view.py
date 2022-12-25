@@ -10,8 +10,9 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import database
-import funcs  
+import funcs
 import logging
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -125,7 +126,8 @@ class Ui_MainWindow(object):
         self.del_button.setText(_translate("MainWindow", "Удалить"))
         self.search_button.setText(_translate("MainWindow", "Поиск"))
         self.load_button.setText(_translate("MainWindow", "Загрузить"))
-#------------------------------------------------------------------------------------------------ 
+
+    # ------------------------------------------------------------------------------------------------
     def add_button_click(self):
 
         try:
@@ -135,7 +137,7 @@ class Ui_MainWindow(object):
             self.load_button_click()
         except Exception as e:
             logging.debug(e)
-        
+
     def del_button_click(self):
         try:
             full_data = funcs.delete_line_fom_bd(
@@ -162,7 +164,7 @@ class Ui_MainWindow(object):
     def load_button_click(self):
         self.load_label.setText(str(database.read_from_file()))
 
-#------------------------------------------------------------------------------------------------ 
+    # ------------------------------------------------------------------------------------------------
 
     def input_data(self) -> list[str]:
         lst = ['' for i in range(4)]
@@ -173,8 +175,8 @@ class Ui_MainWindow(object):
         # self.load_label.setText(str(lst))
         return lst
 
-    def add_new_line_in_bd(self,input_method):
-        
+    def add_new_line_in_bd(self, input_method):
+
         return input_method
 
     def get_data_from_bd(self, file_data: str) -> list[list[str]]:
@@ -200,8 +202,8 @@ class Ui_MainWindow(object):
                 return lst
         except Exception as e:
             logging.debug(e)
-    
-    def search_by_input_info(self,input_info: str, input_array: list[list[str]]) -> list[list[str]]:
+
+    def search_by_input_info(self, input_info: str, input_array: list[list[str]]) -> list[list[str]]:
         try:
             output = []
             for hi_level_item in input_array:
