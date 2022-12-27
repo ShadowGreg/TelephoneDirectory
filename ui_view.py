@@ -138,10 +138,19 @@ class Ui_MainWindow(object):
         except Exception as e:
             logging.debug(e)
 
+    def input(self):
+        lst = ['' for i in range(4)]
+        lst[0] = self.fam_edit.text()
+        lst[1] = self.name_edit.text()
+        lst[2] = self.tel_edit.text()
+        lst[3] = self.comment_edit.text()
+        return lst
+
+
     def del_button_click(self):
         try:
-            full_data = funcs.delete_line_fom_bd(
-                str(self.tel_edit.text()),
+            full_data = funcs.delete_much_contact(
+                self.input(),
                 self.get_data_from_bd(database.read_from_file()))
             database.delete_csv()
             database.delete_txt()
@@ -155,7 +164,8 @@ class Ui_MainWindow(object):
     def search_button_click(self) -> list[list[str]]:
         try:
             return self.search_by_input_info(
-                str(self.tel_edit.text()),
+                str(self.fam_edit.text() or self.name_edit.text()
+                    or self.tel_edit.text() or self.comment_edit.text()),
                 self.get_data_from_bd(database.read_from_file()))
 
         except Exception as e:

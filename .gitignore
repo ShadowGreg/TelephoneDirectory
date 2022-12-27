@@ -6,7 +6,7 @@
  __pycache__/start_data.cpython-311.pyc
 bp.txt
 bp.csv
-app.log
+log_dir/app.log
 /tepm.py
 .gitignore
 /venv/
