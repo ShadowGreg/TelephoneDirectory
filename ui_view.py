@@ -164,7 +164,8 @@ class Ui_MainWindow(object):
     def search_button_click(self) -> list[list[str]]:
         try:
             return self.search_by_input_info(
-                str(self.tel_edit.text()),
+                str(self.fam_edit.text() or self.name_edit.text()
+                    or self.tel_edit.text() or self.comment_edit.text()),
                 self.get_data_from_bd(database.read_from_file()))
 
         except Exception as e:
