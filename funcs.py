@@ -1,6 +1,7 @@
 from exception import logging
 import logger_file
 
+
 def get_data_from_bd(file_data: str) -> list[list[str]]:
     try:
         file_data = file_data.replace('-', '')
