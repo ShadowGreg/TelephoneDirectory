@@ -5,9 +5,11 @@ import start_data
 from exception import logging
 from os import system, name
 from logger_file import log_info
+from db import init_db
+
 import inspect
 
-
+init_db()
 def choose_an_action(exit_choice=False):
     try:
         func_dict = {

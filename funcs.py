@@ -1,5 +1,6 @@
 from exception import logging
 import logger_file
+import db, query, sqlite3
 
 
 def get_data_from_bd(file_data: str) -> list[list[str]]:
@@ -56,3 +57,32 @@ def delete_much_contact(input_matching_line: list, input_array: list[list[str]])
         logger_file.log_info(f'Searched a record: {output_array}', 'delete_much_contact')
     except Exception as e:
         logging.debug(e)
+
+def db_del_record(id):
+        conn = sqlite3.connect(db.dbname, check_same_thread=False)
+        cursor = conn.cursor()
+        cursor.execute(query.delete_contact(id))
+        cursor.Commit()
+        cursor.close()
+    
+    
+def db_add_contact(f_name, l_name, p_num, comment):
+        conn = sqlite3.connect(db.dbname, check_same_thread=False)
+        cursor = conn.cursor()
+        cursor.execute(query.add_contact(f_name, l_name, p_num, comment))
+        cursor.Commit()
+        cursor.close()
+        
+def db_list_base():
+        conn = sqlite3.connect(db.dbname, check_same_thread=False)
+        cursor = conn.cursor()
+        cursor.execute(query.all_records)
+        value = cursor.fetchall()
+        return value
+    
+def db_phone_search(p_num):
+        conn = sqlite3.connect(db.dbname, check_same_thread=False)
+        cursor = conn.cursor()
+        cursor.execute(query.p_num_search(p_num))
+        value = cursor.fetchall()
+        return value
